@@ -1,4 +1,5 @@
 using System;
+using System.Runtime.ConstrainedExecution;
 using System.Security.Cryptography.X509Certificates;
 
 class Program
@@ -11,25 +12,43 @@ class Program
         String gradeUser = Console.ReadLine();
 
         int x = int.Parse(gradeUser);
+        string letter = "";
+    
         if (x >= 90)
         {
-            Console.WriteLine("Good job Your Grade is 'A'");
+            letter = "A";
+            //Console.WriteLine("Good job Your Grade is 'A'");
         }
         else if (x >= 80)
         {
-            Console.WriteLine("Good job Your Grade is 'B'");
+            letter = "B";
+            //Console.WriteLine("Good job Your Grade is 'B'");
         }
         else if (x >= 70)
         {
-            Console.WriteLine("Your Grade is 'C'");
+            letter = "C";
+            //Console.WriteLine("Your Grade is 'C'");
         }
         else if (x >= 60)
         {
-            Console.WriteLine("You have to do it better next time, Your Grade is 'D'");
+            letter = "D";
+            //Console.WriteLine("Your Grade is 'D'");
         }
         else if (x < 60)
         {
-            Console.WriteLine("We regret to inform you that your Grade is 'F'");
+            letter = "F";
+            //Console.WriteLine("Your Grade is 'F'");
+        }
+        Console.WriteLine($"Your grade is {letter}");
+
+        if (x >= 70)
+        {
+            Console.WriteLine("Congrats!! You have approved the course");
+        }
+
+        if (x < 70)
+        {
+            Console.WriteLine("We regret to inform you that you didn't pass the course, we know you can do it better next time");
         }
     }   
 }
