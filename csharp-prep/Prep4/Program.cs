@@ -8,12 +8,19 @@ class Program
 
         List<int> numbers = new List<int>();
 
-        List<string> words = new List<string>();
+        //in case we need it List<string> words = new List<string>();
 
         while (newNumber != 0)
-            Console.WriteLine("What number would you like to append? ");
+        {    
+            Console.WriteLine("Enter a list of numbers, type 0 when finished. ");
+            Console.Write("Enter number: ");
             newNumber = int.Parse(Console.ReadLine());        
-
-
+            
+            if (newNumber != 0)
+            {
+                numbers.Add(newNumber);
+            }
+            
+        }
     }
 } 
