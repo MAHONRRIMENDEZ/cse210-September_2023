@@ -46,7 +46,7 @@ class Program
             Console.WriteLine("Congrats!! You have approved the course");
         }
 
-        if (x < 70)
+        else if (x < 70)
         {
             Console.WriteLine("We regret to inform you that you didn't pass the course, we know you can do it better next time");
         }
