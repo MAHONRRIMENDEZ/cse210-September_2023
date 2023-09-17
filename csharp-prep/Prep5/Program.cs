@@ -14,12 +14,12 @@ class Program
         DisplaySquare(userName, squaredNumber);
 
     }
-    void DisplayWelcomeMessage()
+    static void DisplayWelcomeMessage()
     {
         Console.WriteLine("Welcome to the program!!");
     }
 
-    string PromptUserName()
+    static string PromptUserName()
     {
         Console.Write("Please write your full name: ");
         string name = Console.ReadLine();
@@ -27,7 +27,7 @@ class Program
         return name;
     }
 
-    int PromptUserNumber()
+    static int PromptUserNumber()
     {
         Console.Write("Please share your favorite number: ");
         int number = int.Parse(Console.ReadLine());
@@ -35,15 +35,16 @@ class Program
         return number;
     }
 
-    int SquareNumber(int number)
+    static int SquareNumber(int number)
     {
         int squaredNumber = number * number;
         return squaredNumber;
     }
 
 
-    void DisplaySquare(string name, int square)
+    static void DisplaySquare(string name, int square)
     {
+        Console.WriteLine("Thank you! ");
         Console.WriteLine($"{name}, the square of your number is {square}");
     }
 }
