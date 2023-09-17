@@ -14,7 +14,7 @@ class Program
         DisplaySquare(userName, squaredNumber);
 
     }
-    static void DisplayWelcomeMessage()
+    void DisplayWelcomeMessage()
     {
         Console.WriteLine("Welcome to the program!!");
     }
