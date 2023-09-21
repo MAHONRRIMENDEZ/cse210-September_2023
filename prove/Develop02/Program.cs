@@ -4,6 +4,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop02 World!");
+        int height;
+
+        height = 17;
+        height = 19;
+
+        Console.Write(height);
     }
 }
