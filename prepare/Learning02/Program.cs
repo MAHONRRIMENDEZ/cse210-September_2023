@@ -10,7 +10,7 @@ class Program
         job1._startYear = 2015;
         job1._endYear = 2018;
 
-        job1.DisplayJob();
+        job1.Display();
 
         Job job2 = new Job();
         job2._company = "Live Marketing Solutions";
@@ -18,11 +18,16 @@ class Program
         job2._startYear = 2018;
         job2._endYear = 2019;
 
-        job2.DisplayJob();
+        job2.Display();
 
-        //Resume resume = new Resume();
-        //resume._name = "Mahonrri Mendez";
-        //resume.DisplayResume();
+        Resume myResume = new Resume();
+        myResume._name = "Mahonrri Mendez";
+        //myResume._lastName = "Mendez";
+        
+        myResume._jobs.Add(job1);
+        myResume._jobs.Add(job2);
+
+        myResume.Display(); 
         
     }
 }
