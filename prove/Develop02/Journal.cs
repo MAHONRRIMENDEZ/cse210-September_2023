@@ -6,7 +6,7 @@ public class Journal
 
     public void AddEntry(Entry newEntry)
     {
-
+        
     }
     public void DisplayAll()
     {
@@ -20,7 +20,7 @@ public class Journal
 
     public void LoadFromFile(string file)
     {
-        
+
     }
 
 }    
