@@ -31,12 +31,15 @@ class Program
                 
                 Journal theJournal = new Journal();
                 theJournal._entries.Add(newEntry);
+
+           
             }
 
             if (userComand == 2) //Display
             {
+                
                 Journal theJournal2 = new Journal();
-                theJournal2.DisplayAll();
+                theJournal2.DisplayAll();     
             }
 
             if (userComand == 3)

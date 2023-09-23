@@ -20,8 +20,12 @@ public class Journal
     }
     public void DisplayAll()
     {
+        foreach (Entry entry in _entries)
+        {
         Entry newEntry = new Entry();
         newEntry.Display();
+        }
+
     }
 
     public void SaveToFile(string file)
