@@ -11,5 +11,14 @@ class Program
         Fractions f2 = new Fractions();
         Console.WriteLine(f2.GetFractionString());
         Console.WriteLine(f2.GetDecimalValue());
+
+        Fractions f3 = new Fractions();
+        Console.WriteLine(f3.GetFractionString());
+        Console.WriteLine(f3.GetDecimalValue());
+
+        Fractions f4 = new Fractions();
+        Console.WriteLine(f4.GetFractionString());
+        Console.WriteLine(f4.GetDecimalValue());
+    
     }
 }
