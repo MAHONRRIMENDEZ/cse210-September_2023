@@ -7,7 +7,7 @@ public class Word
 
     public void TheWord(string text)
     {
-        return;
+        _text = text;
     }
 
     public void Hide()
@@ -23,9 +23,9 @@ public class Word
         return true || false;
     }
 
-    public string GetDisplayText()
+    public void GetDisplayText()
     {
-        return "";
+        Console.WriteLine($"{_text}");
     }
 
 

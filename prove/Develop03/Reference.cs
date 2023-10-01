@@ -9,19 +9,25 @@ public class Reference
 
     public void TheReference(string book, int chapter, int verse)
     { 
-
+        _book = book;
+        _chapter = chapter;
+        _verse = verse;
     }
 
     public void TheReference(string book, int chapter, int startVerse, int endVerse)
     { 
-
+        _book = book;
+        _chapter = chapter;
+        _verse = startVerse;
+        _endVerse = endVerse;
     }
 
-    public string GetDisplayText()
+    public void GetDisplayText()
     {
         
         Console.WriteLine($"{_book} {_chapter}:{_verse} ");
-        //Console.WriteLine($"{_book} {_chapter}:{_verse} {_endVerse}");
+        Console.WriteLine($"{_book} {_chapter}:{_verse} - {_endVerse}");
+        
     
     }
 }
