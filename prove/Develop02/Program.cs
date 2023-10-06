@@ -5,7 +5,9 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Welcome to the Journal Program! ");
-    
+        Journal theJournal = new Journal();
+        
+
 
         int userComand = -1;
         while (userComand != 5)
@@ -21,35 +23,43 @@ class Program
 
             if (userComand == 1) //Write
             {
-                string one = "What was the learing today? ";
-                Console.WriteLine("What was the learing today? ");
-                //PromptGenerator prompt1 = PromptGenerator();
+                PromptGenerator Prompt = new PromptGenerator();
+                string newPrompt = Prompt.GetRandomPrompt();
+                Console.WriteLine(newPrompt);
+                    //PromptGenerator prompt1 = PromptGenerator();
+
+                DateTime theCurrentTime = DateTime.Now;
+
                 Entry newEntry  = new Entry();
-                newEntry._date = "09/22/2023";
-                newEntry._prompText = one;
+                newEntry._date = theCurrentTime.ToShortDateString();
+                newEntry._prompText = newPrompt;
                 newEntry._entryText = Console.ReadLine();
                 
-                Journal theJournal = new Journal();
                 theJournal._entries.Add(newEntry);
 
            
             }
 
-            if (userComand == 2) //Display
+            else if (userComand == 2) //Display
             {
                 
-                Journal theJournal2 = new Journal();
-                theJournal2.DisplayAll();     
+                theJournal.DisplayAll();     
             }
 
-            if (userComand == 3)
+            else if (userComand == 3)
             {
-                
+                Console.WriteLine("Please share your file name ");
+                string file = Console.ReadLine();
+
+                theJournal.SaveToFile(file);
             }
 
-            if (userComand == 4)
+            else if (userComand == 4)
             {
-                
+                Console.WriteLine("Please share your file name you want to load ");
+                string file = Console.ReadLine();
+
+                theJournal.LoadFromFile(file);                
             }      
         }
 

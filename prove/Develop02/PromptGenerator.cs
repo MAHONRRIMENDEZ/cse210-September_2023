@@ -15,10 +15,8 @@ public class PromptGenerator
         _prompts.Add("What did I learn today?");
         
         Random rnd = new Random();
-        int index = rnd.Next(_prompts.Count);
-        Console.WriteLine(_prompts[index]);
-        return "";
-        // Random randomGenerator = new Random();
-        //string randomPrompt = randomGenerator.Next();
+        int random = rnd.Next(0, _prompts.Count);
+        return _prompts[random];
+
     }
 }
