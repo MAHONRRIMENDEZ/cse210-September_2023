@@ -46,7 +46,7 @@ class Program
                 theJournal.DisplayAll();     
             }
 
-            else if (userComand == 3)
+            else if (userComand == 3) //Save
             {
                 Console.WriteLine("Please share your file name ");
                 string file = Console.ReadLine();
@@ -54,7 +54,7 @@ class Program
                 theJournal.SaveToFile(file);
             }
 
-            else if (userComand == 4)
+            else if (userComand == 4) //Load
             {
                 Console.WriteLine("Please share your file name you want to load ");
                 string file = Console.ReadLine();
