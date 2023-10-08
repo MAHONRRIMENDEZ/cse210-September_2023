@@ -10,6 +10,7 @@ public class BreathingActivity : Activity
 
     public void Run()
     {
+        
         DisplayStartingMessage();
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration);

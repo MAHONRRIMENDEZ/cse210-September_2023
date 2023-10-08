@@ -20,12 +20,14 @@ class Program
 
             if (userComand == 1) //breathing
             {
+                Console.Clear();
                 BreathingActivity newBreath = new BreathingActivity();
                 newBreath.Run();
             }
 
             else if (userComand == 2) //reflecting
             {
+                Console.Clear();
                 ReflectingActivity newReflect = new ReflectingActivity();
                 newReflect.Run();
                
@@ -33,6 +35,7 @@ class Program
 
             else if (userComand == 3) //listing
             {
+                Console.Clear();
                 ListingActivity newListing = new ListingActivity();
                 newListing.Run();
             }

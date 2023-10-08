@@ -19,11 +19,13 @@ public class ListingActivity : Activity
     }
     public void Run()
     {
+        
         DisplayStartingMessage();
     
         GetListFromUser();
 
         DisplayEndingMessage();
+        
     }
     public string GetRandomPrompt()
     {

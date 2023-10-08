@@ -33,9 +33,11 @@ public class ReflectingActivity : Activity
     }
     public void Run()
     {
+        
         DisplayStartingMessage();
         DisplayPrompt();
         DisplayQuestions();
+        DisplayEndingMessage();
     }
     public string GetRandomPrompt()
     {
@@ -70,6 +72,7 @@ public class ReflectingActivity : Activity
             Console.Write($"> {GetRandomQuestion()}");
             //Console.ReadLine();
             ShowSpinner(10);
+            Console.WriteLine();
         }
 
 
