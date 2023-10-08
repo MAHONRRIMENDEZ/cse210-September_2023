@@ -20,6 +20,10 @@ public class ListingActivity : Activity
     public void Run()
     {
         DisplayStartingMessage();
+    
+        GetListFromUser();
+
+        DisplayEndingMessage();
     }
     public string GetRandomPrompt()
     {
@@ -35,6 +39,8 @@ public class ListingActivity : Activity
         Console.WriteLine($"---{GetRandomPrompt()}---");
         Console.Write($"You may begin in: ");
         ShowCountDown(5);
+        Console.WriteLine();
+
         DateTime startTime = DateTime.Now;
         DateTime endTime = startTime.AddSeconds(_duration); 
 
@@ -46,7 +52,7 @@ public class ListingActivity : Activity
         }
         
         Console.WriteLine($"You listed {_count} items!");
-        Console.WriteLine("Well Done!");
+        Console.WriteLine("");
         return _prompts;
 
     }
