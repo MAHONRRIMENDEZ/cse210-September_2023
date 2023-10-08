@@ -11,9 +11,20 @@ public class BreathingActivity : Activity
     public void Run()
     {
         DisplayStartingMessage();
-        ShowSpinner(_duration);
-        
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = startTime.AddSeconds(_duration);
 
+
+        while (DateTime.Now < endTime)
+        {
+            Console.Write("breth in... "); 
+            ShowCountDown(2);
+            Console.WriteLine();
+            Console.Write("breath out... ");  
+            ShowCountDown(3);
+            Console.WriteLine();
+        }
+        
         DisplayEndingMessage();
     }
 }
