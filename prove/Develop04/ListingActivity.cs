@@ -47,7 +47,7 @@ public class ListingActivity : Activity
         DateTime endTime = startTime.AddSeconds(_duration); 
 
 
-        while (DateTime.Now < endTime)
+        while (DateTime.Now <= endTime)
         {
             Console.ReadLine();
             ++_count;

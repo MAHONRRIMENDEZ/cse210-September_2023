@@ -29,8 +29,11 @@ public class Activity
     }
     public void DisplayEndingMessage()
     {
+        //Console.Clear();
         Console.WriteLine($"Well done! ");
         Console.WriteLine($"You have completed another {_duration} seconds session of the {_name} Activity.");
+        Console.WriteLine("Press enter to return to the main menu.");
+        Console.ReadLine();
         Console.Clear();
     }
     public void ShowSpinner(int seconds)
