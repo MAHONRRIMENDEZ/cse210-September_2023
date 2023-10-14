@@ -12,6 +12,11 @@ public class Word
 
     public void Hide()
     {
+        if (IsHidden() == false)
+        {
+            _text = "___";
+
+        }
         
     }
     public void Show()
@@ -20,12 +25,18 @@ public class Word
     }
     public bool IsHidden()
     {
-        return true || false;
+        if (_text == "___")
+        {
+            return true;
+        }
+
+        return false;
     }
 
     public void GetDisplayText()
     {
-        Console.WriteLine($"{_text}");
+        Console.Write($"{_text} ");
+        Console.WriteLine();
     }
 
 

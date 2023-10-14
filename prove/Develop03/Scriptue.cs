@@ -10,28 +10,33 @@ public class Scripture
 
     public void TheScripture(Reference reference, string text)
     {
-        string[] _words = File.ReadAllLines(words);
-        _words.Clear();
 
-        foreach (string line in _words)
+        string[] words = text.Split(" ");
+
+        foreach (string word in words)
         {
-            string [] parts = line.Split(" | ");
-            Word word = new Word();
-            word. = parts[0];
+            Word newWord = new Word();
+            newWord.TheWord(word);
+            _words.Add(newWord); 
         }
     }
 
     public void HideRandomWords(int numberToHide)
     {
         Random random = new Random();
-        int randomIndex = random.Next(0, 51);
-
-        return;
+        int randomIndex = random.Next(0, _words.Count); // ___ ---
+        _words[randomIndex].Hide();
+    
     }
 
-    public string GetDisplayText()
+    public void GetDisplayText()
     {
-        return "";
+        foreach (Word word in _words)
+        {
+            word.GetDisplayText();
+
+        }
+
     }
 
     public bool IsCompletelyHidden()
