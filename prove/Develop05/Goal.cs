@@ -1,5 +1,5 @@
 using System;
-public class Goal
+public abstract class Goal
 {
     protected string _shortName;
     protected string _description;
@@ -9,22 +9,16 @@ public class Goal
     {
 
     }
-    public void RecordEvent()
-    {
+    public abstract void RecordEvent();
 
-    }
-    public bool IsComplete()
-    {
-        return true || false;
-    }
-    public string GetDetailsString()
+    public abstract bool IsComplete();
+
+    public virtual string GetDetailsString()
     {
         return "";
     }
-    public string GetStringRepresentation()
-    {
-        return "";
-    }
+    public abstract string GetStringRepresentation();
+
 
     
 }

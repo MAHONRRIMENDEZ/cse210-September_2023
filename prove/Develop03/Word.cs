@@ -21,6 +21,10 @@ public class Word
     }
     public void Show()
     {
+        //if ()
+        //{
+           // _text = _text;
+        //}
 
     }
     public bool IsHidden()
