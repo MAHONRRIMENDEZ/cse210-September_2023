@@ -27,30 +27,14 @@ public class GoalManager
 
             if (userComand == 1)
             {
-                Console.WriteLine("The types of Goals are: ");
-                Console.WriteLine("1. Simple Goal");
-                Console.WriteLine("2. Eternal Goal");
-                Console.WriteLine("3. Checklist Goal");
-                Console.Write("Which type of goal would you like to create? ");
-                userComand = int.Parse(Console.ReadLine());
-                if (userComand == 1)
-                {
-
-                }
-                else if (userComand == 2)
-                {
-
-                }
-                else if (userComand == 3)
-                {
-
-                }
-                
+                CreateGoal();
                 
             }
             else if (userComand == 2)
             {
-                
+                Console.WriteLine("The Goals are: ");
+                ListGoalNames();
+                ListGoalDetails(); 
             }
             else if (userComand == 3)
             {
@@ -80,7 +64,7 @@ public class GoalManager
     }
     public void ListGoalNames()
     {
-
+        
     }
     public void ListGoalDetails()
     {
@@ -88,6 +72,34 @@ public class GoalManager
     }
     public void CreateGoal()
     {
+        int userComand = 0;
+        Console.WriteLine("The types of Goals are: ");
+        Console.WriteLine("1. Simple Goal");
+        Console.WriteLine("2. Eternal Goal");
+        Console.WriteLine("3. Checklist Goal");
+        Console.Write("Which type of goal would you like to create? ");
+        userComand = int.Parse(Console.ReadLine());
+        if (userComand == 1)
+        {
+            Console.Write("What is the name of your goal? ");
+            string shortName = Console.ReadLine();
+            Console.Write("What is a short description of your goal? ");
+            string description = Console.ReadLine();
+            Console.Write("What is the amount of points associated with this goal? ");
+            int points = int.Parse(Console.ReadLine());
+            SimpleGoal sGoal = new SimpleGoal(shortName, description, points);                
+            sGoal.RecordEvent(); 
+        
+
+        }
+        else if (userComand == 2)
+        {
+            
+        }
+        else if (userComand == 3)
+        {
+
+        }
         
     }
     public void RecordEvent()
