@@ -64,7 +64,11 @@ public class GoalManager
     }
     public void ListGoalNames()
     {
-        
+        //string[] names = "";
+       // foreach(string name in names)
+        {
+
+        }
     }
     public void ListGoalDetails()
     {
@@ -87,17 +91,26 @@ public class GoalManager
             string description = Console.ReadLine();
             Console.Write("What is the amount of points associated with this goal? ");
             int points = int.Parse(Console.ReadLine());
-            SimpleGoal sGoal = new SimpleGoal(shortName, description, points);                
-            sGoal.RecordEvent(); 
         
-
         }
         else if (userComand == 2)
         {
+            Console.Write("What is the name of your goal? ");
+            string shortName = Console.ReadLine();
+            Console.Write("What is a short description of your goal? ");
+            string description = Console.ReadLine();
+            Console.Write("What is the amount of points associated with this goal? ");
+            int points = int.Parse(Console.ReadLine());
             
         }
         else if (userComand == 3)
         {
+            Console.Write("What is the name of your goal? ");
+            string shortName = Console.ReadLine();
+            Console.Write("What is a short description of your goal? ");
+            string description = Console.ReadLine();
+            Console.Write("What is the amount of points associated with this goal? ");
+            int points = int.Parse(Console.ReadLine());
 
         }
         
