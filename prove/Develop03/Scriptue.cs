@@ -8,15 +8,15 @@ public class Scripture
     private List<Word> _words = new List<Word>();
 
 
-    public void TheScripture(Reference reference, string text)
+    public Scripture(Reference Reference, string text)
     {
+        _reference = Reference;
 
         string[] words = text.Split(" ");
 
         foreach (string word in words)
         {
-            Word newWord = new Word();
-            newWord.TheWord(word);
+            Word newWord = new Word(word);
             _words.Add(newWord); 
         }
     }
@@ -24,8 +24,17 @@ public class Scripture
     public void HideRandomWords(int numberToHide)
     {
         Random random = new Random();
-        int randomIndex = random.Next(0, _words.Count); // ___ ---
-        _words[randomIndex].Hide();
+        int N = 0;
+        while (numberToHide > N)
+        {
+            for (int i = 0; i < numberToHide; ++i)
+            {
+                int randomIndex = random.Next(0, _words.Count); // ___ ---
+                _words[randomIndex].Hide();
+            }
+        }
+
+
     
     }
 

@@ -5,42 +5,28 @@ public class Word
     private string _text;
     private bool _isHidden;
 
-    public void TheWord(string text)
+    public Word(string text)
     {
         _text = text;
     }
 
     public void Hide()
     {
-        if (IsHidden() == false)
-        {
-            _text = "___";
+        _isHidden = true;
 
-        }
-        
     }
     public void Show()
     {
-        //if ()
-        //{
-           // _text = _text;
-        //}
-
+        _isHidden = false;
     }
     public bool IsHidden()
     {
-        if (_text == "___")
-        {
-            return true;
-        }
-
-        return false;
+        return _isHidden;
     }
 
-    public void GetDisplayText()
+    public string GetDisplayText()
     {
-        Console.Write($"{_text} ");
-        Console.WriteLine();
+        return _text;
     }
 
 
