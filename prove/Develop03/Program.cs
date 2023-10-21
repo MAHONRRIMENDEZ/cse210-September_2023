@@ -25,9 +25,9 @@ class Program
             }
 
             //if (S1.IsHidden == true)
-            {
+            
 
-            }
+            
             
 
         }

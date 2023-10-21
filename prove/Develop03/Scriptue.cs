@@ -34,8 +34,6 @@ public class Scripture
             }
         }
 
-
-    
     }
 
     public void GetDisplayText()
