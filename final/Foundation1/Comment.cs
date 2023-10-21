@@ -7,6 +7,7 @@ public class Comments
     
 
     //public void AddComment(string name, string commentText);
+    
     public string GetName()
     {
         return _name;

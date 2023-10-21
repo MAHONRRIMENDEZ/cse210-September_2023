@@ -4,6 +4,7 @@ public class Word
 {
     private string _text;
     private bool _isHidden;
+    // private string hiddenWord;
 
     public Word(string text)
     {
@@ -12,7 +13,10 @@ public class Word
 
     public void Hide()
     {
-        _isHidden = true;
+        if (IsHidden() == false)
+        {
+            _text = "___";
+        }
 
     }
     public void Show()
@@ -21,12 +25,17 @@ public class Word
     }
     public bool IsHidden()
     {
-        return _isHidden;
+        if (_text == "___")
+        {
+            return true;
+        }
+
+        return false;
     }
 
-    public string GetDisplayText()
+    public void GetDisplayText()
     {
-        return _text;
+        Console.Write($"{_text} ");
     }
 
 

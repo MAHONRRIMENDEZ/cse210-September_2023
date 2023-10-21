@@ -6,7 +6,6 @@ public class Video
     private string _author;
     private int _length;
     public List<Comments> _comments = new List<Comments>();
-    public List<Video> _videos = new List<Video>();
     public void AddComment(Comments newComment)
     {
         //_comments.Add(newName);
@@ -52,18 +51,29 @@ public class Video
         _length = length;
     }
 
-    public void AddVideo(Video video)
+    public void AddComents(string name, string text)
     {
-        // adding videos to the list of videos
-        _videos.Add(video);
+        Comments comment = new Comments();
+        comment.SetName(name);
+        comment.SetCommentText(text);
+        _comments.Add(comment);
     }
-    public void DisplayAllVideos()
+
+    
+    public void DisplayVideo()
     {
-        foreach (Video video in _videos)
-        {
-            Console.WriteLine($"Title: {_title} - by {_author}");
-            Console.WriteLine($"Duration in seconds {_length}");
+        
+        
+        Console.WriteLine($"Title: {_title} - by {_author}");
+        Console.WriteLine($"Duration in seconds {_length}");
+
+        foreach(Comments comment in _comments){
+            comment.Display();
         }
+        Console.WriteLine($"The total of comments for this vide is {_comments.Count}");
+
+        
+        
 
     }
 }
