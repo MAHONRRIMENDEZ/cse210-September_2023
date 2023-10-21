@@ -64,13 +64,13 @@ public class Video
     {
         
         
-        Console.WriteLine($"Title: {_title} - by {_author}");
-        Console.WriteLine($"Duration in seconds {_length}");
+        Console.WriteLine($"Title: {_title} - by {_author}.");
+        Console.WriteLine($"Duration in seconds {_length}.");
 
         foreach(Comments comment in _comments){
             comment.Display();
         }
-        Console.WriteLine($"The total of comments for this vide is {_comments.Count}");
+        Console.WriteLine($"The total of comments for this vide is {_comments.Count}.");
 
         
         

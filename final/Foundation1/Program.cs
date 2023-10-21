@@ -73,8 +73,10 @@ class Program
         foreach (Video video in _videos)
         { 
             video.DisplayVideo();
+            Console.WriteLine();
 
         }
+        
         /*v1.DisplayAllVideos();
         v1.DisplayAllComments();
         Console.WriteLine($"The total of comments for this vide is {v1.NumberOfComments()}");
