@@ -19,26 +19,40 @@ class Order
         _customer = customer;
     }
 
-    public int CalculateTotalCostOrder()
+    public void NewProduct(string productName, int productID, int price, int quantity)
     {
-        int sum = 0;
+        Product product1 = new Product();
+        product1.SetProductName(productName);
+        product1.SetProductID(productID);
+        product1.SetPrice(price);
+        product1.SetQuantity(quantity);
+        _products.Add(product1);
+        float total = product1.ProductPrice();
+        Console.WriteLine($" ${total}");
+    }
+    
+    public float CalculateTotalCostOrder()
+    {
+        float sum = 0;
+        
         foreach (Product product in _products)
         {
-        int sum = 0 + product._price;
+            sum += product.ProductPrice();
         }
+        Console.WriteLine($"{sum}");
         return sum;
+
+        
+        
     }
 
     public string PackingLabel()
     {
-        return"";
+        return "";
     }
+    
     public string ShippingLabel()
     {
-        /*if (USA = True)
-        {
-            int shipingcost = $5;
-        } */
         return ""; 
     }
 

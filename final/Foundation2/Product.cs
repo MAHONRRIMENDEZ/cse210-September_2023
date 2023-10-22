@@ -26,7 +26,7 @@ class Product
     {
         _productID = productID;
     }
-    /*
+    
     public int GetPrice()
     {
         return _price;
@@ -43,9 +43,9 @@ class Product
     {
         _quantity = quantity;
     }
-    */
+    
  
-    public int productPrice()
+    public float ProductPrice()
     {
         return _price * _quantity;
     }

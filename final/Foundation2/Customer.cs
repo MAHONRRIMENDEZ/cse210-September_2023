@@ -15,7 +15,7 @@ class Customer
     }
     
     
-    public void NewAddress(string treetAddress, string state_province, string City, string Country)
+    public void NewAddress(string treetAddress, string City, string state_province, string Country)
     {
         Address address = new Address();
         address.SetStreetAddress(treetAddress);
