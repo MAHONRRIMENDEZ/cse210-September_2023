@@ -3,12 +3,20 @@ using System.Security.Cryptography.X509Certificates;
 
 class Product
 {
+     
 
     private string _productName;
     private int _productID;
     private int _price;
     private int _quantity;
 
+    public Product(string productName, int productID, int price, int quantity)
+    {
+        _productName = productName;
+        _productID = productID;
+        _price = price;
+        _quantity = quantity;
+    }
     //Getters and Setters
     public string GetProductName()
     {
@@ -48,6 +56,13 @@ class Product
     public float ProductPrice()
     {
         return _price * _quantity;
+    }
+
+    public string DisplayProductIDAndName()
+    {
+        
+        Console.WriteLine($"Product Name: {_productName} - Product ID: {_productID} - ${ProductPrice()} ");
+        return "";
     }
 
 }

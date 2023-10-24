@@ -7,6 +7,13 @@ class Address
     private string _state_province;
     private string _country;
 
+public Address(string streetAddress, string city, string state_province, string country)
+{
+    _streetAddress = streetAddress;
+    _city = city;
+    _state_province = state_province;
+    _country = country;
+}
     //Getters and Setters
     public string GetStreetAddress()
     {
@@ -41,9 +48,9 @@ class Address
         _country = country;
     }
 
-    public bool USACountry()
+    public bool CheckUSACountry(string country)
     {
-        if (_country == "USA")
+        if (country == "USA")
         {
             return true;
         }
@@ -53,9 +60,12 @@ class Address
         }
     }
 
-    public void CompleteAddress()
+    public string CompleteAddress()
     {
-        Console.WriteLine($"{_streetAddress}, {_city}, {_state_province}, {_country}");
+        //Console.WriteLine("The products will be sent to the following address: ");
+        
+        
+        return $"{_streetAddress}, {_city}, {_state_province}, {_country}";
     }
 
 }

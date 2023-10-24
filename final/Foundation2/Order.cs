@@ -6,54 +6,83 @@ using System.Linq;
 class Order
 {
     List<Product>  _products = new List<Product>();
-    private string _customer;
+    private Customer _customer;
 
-
-    //Getters and Setters   
-    public string GetCustomer()
-    {
-        return _customer;
-    }
-    public void SetCustomer(string customer)
+    public Order(Customer customer)
     {
         _customer = customer;
     }
-
-    public void NewProduct(string productName, int productID, int price, int quantity)
+    //Getters and Setters   
+    public Customer GetCustomer()
     {
-        Product product1 = new Product();
-        product1.SetProductName(productName);
-        product1.SetProductID(productID);
-        product1.SetPrice(price);
-        product1.SetQuantity(quantity);
-        _products.Add(product1);
-        float total = product1.ProductPrice();
-        Console.WriteLine($" ${total}");
+        return _customer;
+    }
+    public void SetCustomer(Customer customer)
+    {
+        _customer = customer;
+    }
+    
+    //Product product1 = new Product();
+    public void AddProduct(Product product)
+    {
+        _products.Add(product);
+
     }
     
     public float CalculateTotalCostOrder()
-    {
-        float sum = 0;
+    {   
+        Console.WriteLine("");    
+        float total = 0;
         
         foreach (Product product in _products)
         {
-            sum += product.ProductPrice();
+            total += product.ProductPrice(); 
         }
-        Console.WriteLine($"{sum}");
-        return sum;
-
+        if (_customer.USACountry())
+        {
+            total += 5;
+        }
+        else
+        {
+            total += 35;
+        }
+        
+        Console.WriteLine($"Making a total of ${total} (Shipping cost: $5 for the USA and $35 for out USA)");
+        
+        return total;  
         
         
     }
 
     public string PackingLabel()
     {
-        return "";
+        
+        
+        string label = "";
+        
+        if (_products.Count > 0)
+        {
+            Console.WriteLine("");
+            Console.WriteLine("");
+            Console.WriteLine("Packing Label: (price is based in price * quantity) ");
+            Console.WriteLine("");
+            foreach(Product product in _products)
+            {
+                
+                label =  product.DisplayProductIDAndName();
+                //Console.WriteLine($"{_products} {_products.GetProductID()} {_products.GetProductName()}");
+            }
+        }
+
+        return label;
+         
     }
     
     public string ShippingLabel()
     {
-        return ""; 
+        _customer.DisplayShipingLabel();
+        return "";
+        
     }
 
 
