@@ -14,7 +14,7 @@ class Program
 
         Console.WriteLine($"{c1.GetCustomerName()}");
         Console.WriteLine($"{a1.CompleteAddress()}");
-
+                    ///////// /// Name, Code, Price, Quantity
         Product p1 = new Product("table", 5555, 100, 2); 
         Product p2 = new Product("chair", 1111, 50, 6); 
         Product p3 = new Product("desk", 8888, 150, 1); 
@@ -42,7 +42,7 @@ class Program
 
         Console.WriteLine($"{c2.GetCustomerName()}");
         Console.WriteLine($"{a2.CompleteAddress()}");
-
+///////////////////////////// /// Name, Code, Price, Quantity
         Product p5 = new Product("table", 5555, 100, 4); 
         Product p6 = new Product("chair", 1111, 50, 12); 
         Product p7 = new Product("desk", 8888, 150, 5); 
