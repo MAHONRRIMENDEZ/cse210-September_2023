@@ -7,8 +7,10 @@ class Event
     private string _description;
     private string _date;
     private string _time;
+    
+    //private Address _address;
     //address is in the Address class.
-
+    
         //Constructors
     public Event() //no arguments 
     {
@@ -21,11 +23,9 @@ class Event
         _description = description;
         _date = date;
         _time = time;
+        
     }
-    public string GetAddress()
-    {
-        return GetAddress();
-    }
+    
 
     //Getters and Setters
     public void SetType(string type)
@@ -70,15 +70,12 @@ class Event
     }
     
 
-    public string StandardDetails()
+    
+
+    public string ShortDescription()
     {
-        Console.WriteLine("Standard Details: ");
-        return $"Event Title: {_eventTitle}. Description: {_description} Date: {_date}, Time: {_time}";
+        Console.WriteLine("Short Description:");
+        return $"This will be a {GetType()} event. Title: {GetEventTitle()}. Date: {GetDate()}." ;
+        
     }
-
-    /*public string ShortDescription(string shortDescription)
-    {
-        return $"{shortDescription} - {_eventTitle} Date: {_date}, Time: {_time}";
-    }    */                             //   may need to be in the other classes       
-
 }
