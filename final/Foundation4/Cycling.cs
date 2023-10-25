@@ -2,10 +2,14 @@ using System;
 
 class Cycling : Activity
 {
-    private string _speed;
+    private int _speed;
 
+    public override int CalculateSpeed() // kilometers per hour)
+    {
+        return 0;
+    }
     public override string GetSummary()
     {
-        return $"{GetLenghtActivity()} *ACTIVITY*{GetLenghtActivity()} - {CalculateDistance()},{CalculateSpeed()}, {CalculatePace()}";
+        return $"{GetDate()} {GetTyype()}({GetLenghtActivity()} min) - Distance {GetDistance()} km,{CalculateSpeed()}, {CalculatePace()} min per km";
     }
 }

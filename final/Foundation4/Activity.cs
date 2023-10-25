@@ -4,7 +4,9 @@ class Activity
 {
     private string _date;
     private int _lenghtActivity;
-
+    private string _type;
+    
+    private int _distance;
 
     //Distance (km) = swimming laps * 50 / 1000
     public Activity()
@@ -32,23 +34,39 @@ class Activity
     {
         return _lenghtActivity;
     }
-
-
-    public virtual int CalculateDistance()
+    public void SetTyype(string type)
     {
-        return 0;
+        _type = type;
     }
-    public virtual int CalculateSpeed()
+    public string GetTyype()
     {
-        return 0;
+        return _type;
     }
-    public virtual int CalculatePace()
+    public void SetDistance(int distance)
     {
-        return 0;
+        _distance = distance;
+    }
+    public int GetDistance()
+    {
+        return _distance;
+    }
+    
+    
+    /*public virtual int CalculateDistance()
+    {
+        return GetDistance();
+    }*/
+    public virtual int CalculateSpeed() // kilometers per hour)
+    {
+        return GetDistance() / GetLenghtActivity() * 60;
+    }
+    public virtual int CalculatePace() //  minutes per kilometer) In either case the length of a lap in the lap pool is 50 meters.
+    {
+        return GetLenghtActivity() / GetDistance();
     }
     public virtual string GetSummary()
     {
-        return $"{_date} *ACTIVITY*{_lenghtActivity} - {CalculateDistance()},{CalculateSpeed()}, {CalculatePace()}";
+        return $"{GetDate()} {GetTyype()}({GetLenghtActivity()} min) - Distance: {GetDistance()} km, Speed: {CalculateSpeed()}, {CalculatePace()} min per km";
     }
 
     /*03 Nov 2022 Running (30 min)- Distance 3.0 miles, Speed 6.0 mph, Pace: 10.0 min per mile
