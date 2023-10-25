@@ -27,12 +27,12 @@ class Reception : Event
         
         Console.WriteLine();
         Console.WriteLine("Standard Details: ");
-        return $"Event Title: {GetEventTitle()}. Description: {GetDescription()}. Date and Time: {GetDate()} - {GetTime()}, Address: {_address.CompleteAddress()}.";
+        return $"Event Title: {GetEventTitle()}. \nDescription: {GetDescription()}. \nDate and Time: {GetDate()} - {GetTime()}, \nAddress: {_address.CompleteAddress()}.";
     }
-    public string FullDetails()  //this may need to be in the other classes 
+    public string FullDetails()  //this may need to be in the other classes \n
     {
         Console.WriteLine("Full and Standard Details:");
-        return $" This will be a {GetType()} event. {StandardDetails()} You can confirm your attendance by sending an email to {_email}";
+        return $"This will be a {GetType()} event. \n{StandardDetails()} \nYou can confirm your attendance by sending an email to {_email}";
     }
 
     /*public string ShortDescription() PENDING 

@@ -26,12 +26,12 @@ class Outdoor : Event
         
         Console.WriteLine(); //this may need to be in the main class, but I can't pass the address correctly. 
         Console.WriteLine("Standard Details: ");
-        return $"Event Title: {GetEventTitle()}. Description: {GetDescription()}. Date and Time: {GetDate()} - {GetTime()}, Address: {_address.CompleteAddress()}.";
+        return $"Event Title: {GetEventTitle()}. \nDescription: {GetDescription()}. \nDate and Time: {GetDate()} - {GetTime()}, \nAddress: {_address.CompleteAddress()}.";
     }
     public string FullDetails()  
     {
         Console.WriteLine("Full and Standard Details:");
-        return $" This will be a {GetType()} event. {StandardDetails()}. Please be advised that the most likely weather will be, {_weather}, so please take your forecasts. ";
+        return $"This will be a {GetType()} event. \n{StandardDetails()}. Please be advised that the most likely weather will be, {_weather}, so please take your forecasts. ";
     }
 
 }

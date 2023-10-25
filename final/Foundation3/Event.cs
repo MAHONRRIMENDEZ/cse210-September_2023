@@ -75,7 +75,7 @@ class Event
     public string ShortDescription()
     {
         Console.WriteLine("Short Description:");
-        return $"This will be a {GetType()} event. Title: {GetEventTitle()}. Date: {GetDate()}." ;
+        return $"This will be a {GetType()} event. \nTitle: {GetEventTitle()}. Date: {GetDate()}." ;
         
     }
 }
